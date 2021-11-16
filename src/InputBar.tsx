@@ -1,4 +1,6 @@
-import { useForm, SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
+import searchIcon from "./assets/icon-search.svg";
+import "./InputBar.css";
 
 // * Type declarations
 type Input = {
@@ -29,6 +31,7 @@ export default function Form({ setUsername }: FormProps) {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="Input-container">
+        <img src={searchIcon} alt="magnifying glass" />
         <input
           type="text"
           {...register("userSearch")}

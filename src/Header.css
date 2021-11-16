@@ -1,0 +1,29 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2.25rem;
+}
+
+.Header-title {
+  font: var(--h1);
+}
+
+.Header-toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.Header-toggle:hover,
+.Header-toggle:focus {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.Header span {
+  font: var(--h4);
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  margin-right: 1rem;
+}

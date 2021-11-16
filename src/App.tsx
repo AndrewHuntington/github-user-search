@@ -1,6 +1,7 @@
 import { useState } from "react";
 import useAxios from "axios-hooks";
-import Form from "./Form";
+import Header from "./Header";
+import InputBar from "./InputBar";
 import "./App.css";
 
 // * Constants
@@ -44,8 +45,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="App-title">devfinder</h1>
-      <Form setUsername={setUsername} />
+      <Header />
+      <InputBar setUsername={setUsername} />
       {userDataToDisplay}
     </div>
   );
