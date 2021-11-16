@@ -1,24 +1,80 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import useAxios from "axios-hooks";
+import { useForm, SubmitHandler } from "react-hook-form";
+import "./App.css";
+
+// * Type declarations
+type Input = {
+  userSearch: string;
+};
+
+// * Constants
+const URL = "https://api.github.com/users/";
+const USER_INFO = [
+  "name",
+  "login",
+  "created_at",
+  "bio",
+  "public_repos",
+  "followers",
+  "following",
+  "location",
+  "blog",
+  "twitter_username",
+  "company",
+];
 
 function App() {
+  // * Hooks
+  const [username, setUsername] = useState("octocat");
+  const [{ data, loading, error }] = useAxios(`${URL}${username}`);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<Input>();
+
+  // * API States
+  // TODO: Improve these
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error!</p>;
+
+  const onSubmit: SubmitHandler<Input> = (userInput: Input) => {
+    // TODO: Remove (debug)
+    console.log(userInput);
+
+    setUsername(userInput.userSearch);
+    reset();
+  };
+
+  // TODO: Remove (for debugging purposes)
+  // console.log(watch("userSearch"));
+
+  const userDataToDisplay = USER_INFO.map((key, i) => {
+    return (
+      <div key={i}>
+        <p>
+          {key}: {data?.[key]}
+        </p>
+      </div>
+    );
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className="App-title">devfinder</h1>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="Input-container">
+          <input
+            type="text"
+            {...register("userSearch")}
+            placeholder="Search GitHub username..."
+          />
+          <button type="submit">Search</button>
+        </div>
+      </form>
+      {userDataToDisplay}
     </div>
   );
 }

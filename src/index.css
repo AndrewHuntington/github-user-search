@@ -1,13 +1,40 @@
-body {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /**** Colors ****/
+  /* Shared */
+  --color-blue: #0079ff;
+
+  /* Light Mode */
+  --color-dark-grey: #697c9a;
+  --color-greyish-blue: #4b6a9b;
+  --color-black-light: #2b3442;
+  --color-light-grey: #f6f8ff;
+  --color-off-white: #fefefe;
+
+  /* Dark Mode */
+  --color-white: #ffffff;
+  --color-black-dark: #141d2f;
+  --color-lighter-black-dark: #1e2a47;
+
+  /**** Fonts ****/
+  --h1: bold 1.75rem/2.375rem "Space Mono", monospace;
+  --h2: bold 1.375rem/2.0625rem "Space Mono", monospace;
+  --h3: 1rem/1.5rem "Space Mono", monospace;
+  --h4: 0.8125rem/1.25rem "Space Mono", monospace;
+  --body-text: 0.9375rem/1.5625rem "Space Mono", monospace;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font: var(--body-text);
 }
