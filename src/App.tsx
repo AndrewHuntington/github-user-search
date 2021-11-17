@@ -1,7 +1,7 @@
 import { useState } from "react";
-import useAxios from "axios-hooks";
 import Header from "./Header";
 import InputBar from "./InputBar";
+import InfoDisplay from "./InfoDisplay";
 import "./App.css";
 
 // * Constants
@@ -24,31 +24,12 @@ const USER_INFO = [
 function App() {
   // * Hooks
   const [username, setUsername] = useState("octocat");
-  const [{ data, loading, error }] = useAxios(`${URL}${username}`);
-
-  // * API States
-  // TODO: Improve these
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error!</p>;
-
-  // TODO: Remove (for debugging purposes)
-  // console.log(watch("userSearch"));
-
-  const userDataToDisplay = USER_INFO.map((key, i) => {
-    return (
-      <div key={i}>
-        <p>
-          {key}: {data?.[key]}
-        </p>
-      </div>
-    );
-  });
 
   return (
     <div className="App">
       <Header />
       <InputBar setUsername={setUsername} />
-      {userDataToDisplay}
+      <InfoDisplay username={username} />
     </div>
   );
 }

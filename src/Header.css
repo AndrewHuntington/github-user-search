@@ -6,6 +6,7 @@
 
 .Header-title {
   font: var(--h1);
+  color: var(--color-black-light);
 }
 
 .Header-toggle {

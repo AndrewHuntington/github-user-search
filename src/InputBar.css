@@ -24,6 +24,15 @@
   padding: 12.5px 18px;
 }
 
+.Input-container button:hover,
+.Input-container button:focus {
+  opacity: 0.7;
+}
+
+.opaque {
+  opacity: 0.7;
+}
+
 .Input-search-container {
   display: flex;
   align-items: center;

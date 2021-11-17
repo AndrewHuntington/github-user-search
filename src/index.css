@@ -38,5 +38,5 @@ html {
 
 body {
   font: var(--body-text);
-  background-color: var(--color-light-grey);
+  color: var(--color-greyish-blue);
 }
