@@ -2,10 +2,17 @@
   background-color: var(--color-off-white);
   border-radius: 15px;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  padding: 0.45rem 0.5rem 0.45rem clamp(1rem, 4vw, 2rem);
+  margin-bottom: 1rem;
 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.Input-container img {
+  height: 20px;
+  width: 20px;
 }
 
 .Input-container button {
@@ -17,13 +24,20 @@
   padding: 12.5px 18px;
 }
 
+.Input-search-container {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
 input {
   border: none;
   font-family: "Space Mono", monospace;
   font-size: 0.8125rem;
   line-height: 1.5625rem;
-  margin: 0 0.45rem 0 0.8rem;
-  width: 63%;
+  margin: 0 0.45rem 0 0.5rem;
+  width: 100%;
 }
 
 input:focus {

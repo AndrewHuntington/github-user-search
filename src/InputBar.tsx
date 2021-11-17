@@ -31,12 +31,14 @@ export default function Form({ setUsername }: FormProps) {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="Input-container">
-        <img src={searchIcon} alt="magnifying glass" />
-        <input
-          type="text"
-          {...register("userSearch")}
-          placeholder="Search GitHub username…"
-        />
+        <div className="Input-search-container">
+          <img src={searchIcon} alt="magnifying glass" />
+          <input
+            type="text"
+            {...register("userSearch")}
+            placeholder="Search GitHub username…"
+          />
+        </div>
         <button type="submit">Search</button>
       </div>
     </form>

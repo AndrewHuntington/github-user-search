@@ -7,6 +7,7 @@ import "./App.css";
 // * Constants
 const URL = "https://api.github.com/users/";
 const USER_INFO = [
+  "avatar_url",
   "name",
   "login",
   "created_at",
