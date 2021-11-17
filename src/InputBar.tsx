@@ -35,7 +35,7 @@ export default function Form({ setUsername }: FormProps) {
         <input
           type="text"
           {...register("userSearch")}
-          placeholder="Search GitHub username..."
+          placeholder="Search GitHub username…"
         />
         <button type="submit">Search</button>
       </div>
