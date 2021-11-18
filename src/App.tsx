@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Header from "./Header";
-import InputBar from "./InputBar";
-import InfoDisplay from "./InfoDisplay";
+import Header from "./components/Header";
+import InputBar from "./components/InputBar";
+import InfoDisplay from "./components/InfoDisplay";
 import "./App.css";
 
 // * Constants

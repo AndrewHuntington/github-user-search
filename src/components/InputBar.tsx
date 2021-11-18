@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import searchIcon from "./assets/icon-search.svg";
+import searchIcon from "../assets/icon-search.svg";
 import "./InputBar.css";
 
 // * Type declarations
@@ -60,6 +60,7 @@ export default function Form({ setUsername }: FormProps) {
           onMouseLeave={changeOpacity}
         >
           <img src={searchIcon} alt="magnifying glass" />
+          {/* TODO: Add error message when search fails */}
           <input
             type="text"
             {...register("userSearch")}

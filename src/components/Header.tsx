@@ -1,4 +1,4 @@
-import moon from "./assets/icon-moon.svg";
+import moon from "../assets/icon-moon.svg";
 import "./Header.css";
 
 export default function Header() {
