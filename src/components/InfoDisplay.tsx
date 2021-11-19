@@ -1,4 +1,5 @@
 import useAxios from "axios-hooks";
+import InfoDisplayHeader from "./InfoDisplayHeader";
 import "./InfoDisplay.css";
 
 // * Constants
@@ -32,14 +33,14 @@ export default function InfoDisplay({ username }: InfoDisplayProps) {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error!</p>;
 
-  const userDataToDisplay = USER_INFO.map((key, i) => {
-    return (
-      <div key={i}>
-        <p>
-          {key}: {data?.[key]}
-        </p>
-      </div>
-    );
-  });
-  return <div className="InfoDisplay">{userDataToDisplay}</div>;
+  return (
+    <div className="InfoDisplay">
+      <InfoDisplayHeader
+        name={data["name"]}
+        login={data["login"]}
+        created_at={data["created_at"]}
+        avatar_url={data["avatar_url"]}
+      />
+    </div>
+  );
 }

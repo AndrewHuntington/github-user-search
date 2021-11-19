@@ -1,0 +1,8 @@
+.InfoDisplayHeader {
+  display: flex;
+}
+
+.InfoDisplayHeader-img {
+  border-radius: 100%;
+  height: 70px;
+}

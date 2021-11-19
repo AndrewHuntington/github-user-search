@@ -3,16 +3,19 @@ import { useForm } from "react-hook-form";
 import searchIcon from "../assets/icon-search.svg";
 import "./InputBar.css";
 
+// TODO:
+// Add error message when search fails
+
 // * Type declarations
 type Input = {
   userSearch: string;
 };
 
-type FormProps = {
+type InputBarProps = {
   setUsername: (username: string) => void;
 };
 
-export default function Form({ setUsername }: FormProps) {
+export default function InputBar({ setUsername }: InputBarProps) {
   // * Hooks
   const {
     register,
