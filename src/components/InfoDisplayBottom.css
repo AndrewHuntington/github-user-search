@@ -1,0 +1,17 @@
+.InfoDisplayBottom-line {
+  /* Space-between icon and text */
+  --space: 0.8125rem;
+
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.InfoDisplayBottom-line,
+img {
+  height: 20px;
+  margin-right: var(--space);
+}
+
+.location {
+  margin-right: 1.203125rem;
+}

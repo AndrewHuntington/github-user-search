@@ -5,6 +5,7 @@
 .InfoDisplayBody-stat-block {
   background-color: var(--color-light-grey);
   border-radius: 10px;
+  margin-bottom: 1.5rem;
   height: 85px;
 }
 

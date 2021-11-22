@@ -1,6 +1,7 @@
 import useAxios from "axios-hooks";
 import InfoDisplayHeader from "./InfoDisplayHeader";
 import InfoDisplayBody from "./InfoDisplayBody";
+import InfoDisplayBottom from "./InfoDisplayBottom";
 import "./InfoDisplay.css";
 
 // * Constants
@@ -48,6 +49,13 @@ export default function InfoDisplay({ username }: InfoDisplayProps) {
         public_repos={data["public_repos"]}
         followers={data["followers"]}
         following={data["following"]}
+      />
+
+      <InfoDisplayBottom
+        location={data["location"]}
+        blog={data["blog"]}
+        twitter_username={data["twitter_username"]}
+        company={data["company"]}
       />
     </div>
   );
