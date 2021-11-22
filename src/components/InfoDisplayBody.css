@@ -1,0 +1,25 @@
+.InfoDisplayBody-bio {
+  margin-bottom: 1.5rem;
+}
+
+.InfoDisplayBody-stat-block {
+  background-color: var(--color-light-grey);
+  border-radius: 10px;
+  height: 85px;
+}
+
+.InfoDisplayBody-columns {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  text-align: center;
+  height: 100%;
+}
+
+.stat-block-title,
+h4 {
+  font-weight: normal;
+  color: var(--color-greyish-blue);
+  margin-bottom: 0.5rem;
+}
