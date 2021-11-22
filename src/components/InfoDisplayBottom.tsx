@@ -19,30 +19,67 @@ export default function InfoDisplayBottom({
 }: InfoDisplayBottomProps) {
   return (
     <div className="InfoDisplayBottom">
-      <div
-        className={`InfoDisplayBottom-line ${location ? "" : "transparent"}`}
-      >
-        <img className="location" src={iconLocation} alt="" />
-        <p>{location ? location : "Not Available"}</p>
+      {/* 
+        These "lines" could all refactored into their own components,
+        but the simplicity of this project, plus the need to consider
+        multiple veiwports makes doing so more difficult than necessary, 
+        I think.
+      */}
+      <div className="InfoDisplayBottom-col-1">
+        <div
+          className={`InfoDisplayBottom-line ${location ? "" : "transparent"}`}
+        >
+          <img className="location" src={iconLocation} alt="" />
+          <p>{location ? location : "Not Available"}</p>
+        </div>
+
+        <a
+          className={`InfoDisplayBottom-link ${blog ? "" : "inactive"}`}
+          href={`http://${blog}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            className={`InfoDisplayBottom-line ${blog ? "" : "transparent"}`}
+          >
+            <img src={iconWebsite} alt="" />
+            <p>{blog ? blog : "Not Available"}</p>
+          </div>
+        </a>
       </div>
 
-      <div className={`InfoDisplayBottom-line ${blog ? "" : "transparent"}`}>
-        <img src={iconWebsite} alt="" />
-        <p>{blog ? blog : "Not Available"}</p>
-      </div>
+      <div className="InfoDisplayBottom-col-2">
+        <a
+          className={`InfoDisplayBottom-link ${
+            twitter_username ? "" : "inactive"
+          }`}
+          href={`https://twitter.com/${twitter_username}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            className={`InfoDisplayBottom-line ${
+              twitter_username ? "" : "transparent"
+            }`}
+          >
+            <img src={iconTwitter} alt="" />
+            <p>{twitter_username ? twitter_username : "Not Available"}</p>
+          </div>
+        </a>
 
-      <div
-        className={`InfoDisplayBottom-line ${
-          twitter_username ? "" : "transparent"
-        }`}
-      >
-        <img src={iconTwitter} alt="" />
-        <p>{twitter_username ? twitter_username : "Not Available"}</p>
-      </div>
-
-      <div className={`InfoDisplayBottom-line ${company ? "" : "transparent"}`}>
-        <img src={iconCompany} alt="" />
-        <p>{company ? company : "Not Available"}</p>
+        <a
+          className={`InfoDisplayBottom-link ${company ? "" : "inactive"}`}
+          href={`https://github.com/${company?.slice(1, company.length)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div
+            className={`InfoDisplayBottom-line ${company ? "" : "transparent"}`}
+          >
+            <img src={iconCompany} alt="" />
+            <p>{company ? company : "Not Available"}</p>
+          </div>
+        </a>
       </div>
     </div>
   );
