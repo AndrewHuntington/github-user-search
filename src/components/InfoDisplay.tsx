@@ -6,20 +6,6 @@ import "./InfoDisplay.css";
 
 // * Constants
 const URL = "https://api.github.com/users/";
-const USER_INFO = [
-  "avatar_url",
-  "name",
-  "login",
-  "created_at",
-  "bio",
-  "public_repos",
-  "followers",
-  "following",
-  "location",
-  "blog",
-  "twitter_username",
-  "company",
-];
 
 // * Type Declarations
 type InfoDisplayProps = {
