@@ -1,11 +1,12 @@
 .InfoDisplayBody-bio {
   margin-bottom: 1.5rem;
+  min-height: 2rem;
 }
 
 .InfoDisplayBody-stat-block {
   background-color: var(--color-light-grey);
   border-radius: 10px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.75rem;
   height: 85px;
 }
 
@@ -18,9 +19,20 @@
   height: 100%;
 }
 
-.stat-block-title,
-h4 {
+.stat-block-title h4 {
   font-weight: normal;
   color: var(--color-greyish-blue);
   margin-bottom: 0.5rem;
+}
+
+@media (min-width: 600px) {
+  .InfoDisplayBody-columns {
+    text-align: left;
+    padding-right: 6rem;
+  }
+}
+@media (min-width: 900px) {
+  .InfoDisplayBody-columns {
+    padding-right: 5.2rem;
+  }
 }

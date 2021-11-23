@@ -33,3 +33,10 @@
 .location {
   margin-right: 1.203125rem;
 }
+
+@media (min-width: 600px) {
+  .InfoDisplayBottom {
+    display: flex;
+    gap: 62px;
+  }
+}

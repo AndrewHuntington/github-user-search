@@ -9,3 +9,22 @@
 .transparent {
   opacity: 0.5;
 }
+
+@media (min-width: 600px) {
+  .InfoDisplay {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .InfoDisplay {
+    padding: 3.25rem 3rem;
+    max-height: 500px;
+  }
+
+  .InfoDisplay-desktop-helper {
+    padding-left: 154px;
+    position: relative;
+    top: -53px;
+  }
+}

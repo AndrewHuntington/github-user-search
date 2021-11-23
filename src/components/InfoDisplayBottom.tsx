@@ -19,7 +19,8 @@ export default function InfoDisplayBottom({
 }: InfoDisplayBottomProps) {
   return (
     <div className="InfoDisplayBottom">
-      {/* 
+      {/* TODO: Maybe this does need a refactor after all? */}
+      {/*
         These "lines" could all refactored into their own components,
         but the simplicity of this project, plus the need to consider
         multiple veiwports makes doing so more difficult than necessary, 

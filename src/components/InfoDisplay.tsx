@@ -44,19 +44,20 @@ export default function InfoDisplay({ username }: InfoDisplayProps) {
         avatar_url={data["avatar_url"]}
       />
 
-      <InfoDisplayBody
-        bio={data["bio"]}
-        public_repos={data["public_repos"]}
-        followers={data["followers"]}
-        following={data["following"]}
-      />
-
-      <InfoDisplayBottom
-        location={data["location"]}
-        blog={data["blog"]}
-        twitter_username={data["twitter_username"]}
-        company={data["company"]}
-      />
+      <div className="InfoDisplay-desktop-helper">
+        <InfoDisplayBody
+          bio={data["bio"]}
+          public_repos={data["public_repos"]}
+          followers={data["followers"]}
+          following={data["following"]}
+        />
+        <InfoDisplayBottom
+          location={data["location"]}
+          blog={data["blog"]}
+          twitter_username={data["twitter_username"]}
+          company={data["company"]}
+        />
+      </div>
     </div>
   );
 }

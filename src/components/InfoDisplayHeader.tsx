@@ -44,11 +44,15 @@ export default function InfoDisplayHeader({
         <img className="InfoDisplayHeader-img" src={avatar_url} alt="" />
       </div>
       <div className="InfoDisplayHeader-col-2">
-        <h1 className="InfoDisplayHeader-name">{name ? name : login}</h1>
-        <h3 className="InfoDisplayHeader-login">@{login}</h3>
-        <p className="InfoDisplayHeader-date">
-          Joined {parseDate(created_at!)}
-        </p>
+        <div className="InfoDisplayHeader-col-2-sub-col-1">
+          <h1 className="InfoDisplayHeader-name">{name ? name : login}</h1>
+          <h3 className="InfoDisplayHeader-login">@{login}</h3>
+        </div>
+        <div className="InfoDisplayHeader-col-2-sub-col-2">
+          <p className="InfoDisplayHeader-date">
+            Joined {parseDate(created_at!)}
+          </p>
+        </div>
       </div>
     </header>
   );

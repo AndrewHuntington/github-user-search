@@ -13,8 +13,32 @@
   color: var(--color-blue);
 }
 
+.InfoDisplayHeader-date {
+  color: var(--color-dark-grey);
+}
+
+.InfoDisplayHeader-col-2 {
+  width: 100%;
+}
+
 @media (min-width: 600px) {
+  .InfoDisplayHeader {
+    margin-bottom: 1.3rem;
+  }
+
   .InfoDisplayHeader-img {
     margin-right: 2.3125rem;
+    height: 117px;
+  }
+}
+
+@media (min-width: 900px) {
+  .InfoDisplayHeader {
+    margin-bottom: 0;
+  }
+
+  .InfoDisplayHeader-col-2 {
+    display: flex;
+    justify-content: space-between;
   }
 }

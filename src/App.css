@@ -2,3 +2,15 @@
   margin: 1.9375rem auto;
   width: min(573px, 87%);
 }
+
+@media (min-width: 600px) {
+  .App {
+    margin: 8.75rem auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .App {
+    width: 730px;
+  }
+}
