@@ -11,6 +11,7 @@ import "./App.css";
  * Finish readme
  * Have the correct color scheme chosen for the user based on their computer
  *    preferences. I.E. `prefers-color-scheme` in CSS.
+ * Add favicon
  */
 
 function App() {
