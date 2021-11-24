@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import useAxios from "axios-hooks";
 import InputBar from "./components/InputBar";
 import InfoDisplay from "./components/InfoDisplay";
@@ -7,13 +7,13 @@ import "./App.css";
 
 /**
  * TODO List:
- * Add error message when search fails
  * Refactor
  * Finish readme
- * Have the correct color scheme chosen for the user based on their computer
- *    preferences. I.E. `prefers-color-scheme` in CSS.
- * Add favicon
  */
+
+// checks if the user prefers dark mode
+const mq = window.matchMedia("(prefers-color-scheme: dark)");
+const useDarkMode = mq.matches;
 
 // * Constants
 const URL = "https://api.github.com/users/";
@@ -24,8 +24,16 @@ function App() {
   // dark mode styles found in InfoDisplay.css
   const [isDarkMode, setDarkMode] = useState(false);
   const [{ data, loading, error }] = useAxios(`${URL}${username}`);
+  const firstRender = useRef(true);
 
   useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      // will begin in dark mode if the user prefers it
+      useDarkMode ? setDarkMode(true) : setDarkMode(false);
+      return;
+    }
+
     document.body.classList.toggle("dark", isDarkMode);
   }, [isDarkMode]);
 
