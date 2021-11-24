@@ -4,6 +4,15 @@ import InfoDisplay from "./components/InfoDisplay";
 import Header from "./components/Header";
 import "./App.css";
 
+/**
+ * TODO List:
+ * Add error message when search fails
+ * Refactor
+ * Finish readme
+ * Have the correct color scheme chosen for the user based on their computer
+ *    preferences. I.E. `prefers-color-scheme` in CSS.
+ */
+
 function App() {
   // * Hooks
   const [username, setUsername] = useState("octocat");
