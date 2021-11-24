@@ -42,6 +42,7 @@
   display: flex;
   align-items: center;
 
+  position: relative;
   width: 100%;
 }
 
@@ -57,4 +58,12 @@ input {
 input:focus {
   outline: none;
   caret-color: var(--color-blue);
+}
+
+.Input-error-msg:before {
+  content: "No results";
+  color: red;
+  position: absolute;
+  right: 1rem;
+  top: 0.05rem;
 }

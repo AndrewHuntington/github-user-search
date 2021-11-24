@@ -1,10 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import searchIcon from "../assets/icon-search.svg";
 import "./InputBar.css";
-
-// TODO:
-// Add error message when search fails
 
 // * Type declarations
 type Input = {
@@ -14,25 +11,21 @@ type Input = {
 type InputBarProps = {
   setUsername: (username: string) => void;
   isDarkMode: boolean;
+  error: any; // TODO: Type better
 };
 
-export default function InputBar({ setUsername, isDarkMode }: InputBarProps) {
+export default function InputBar({
+  setUsername,
+  isDarkMode,
+  error,
+}: InputBarProps) {
   // * Hooks
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<Input>();
+  const { register, handleSubmit, reset } = useForm<Input>();
   const [isFocus, setIsFocus] = useState(true);
   const [isBlur, setIsBlur] = useState(false);
 
   const onSubmit = (userInput: Input) => {
-    // TODO: Remove (debug)
-    console.log(userInput);
-
     setUsername(userInput.userSearch);
-    reset();
   };
 
   const changeOpacity = () => {
@@ -64,7 +57,6 @@ export default function InputBar({ setUsername, isDarkMode }: InputBarProps) {
           onMouseLeave={changeOpacity}
         >
           <img src={searchIcon} alt="magnifying glass" />
-          {/* TODO: Add error message when search fails */}
           <input
             className={`${isDarkMode && "semi-dark"}`}
             type="text"
@@ -74,6 +66,7 @@ export default function InputBar({ setUsername, isDarkMode }: InputBarProps) {
             onBlur={handleBlur}
             autoFocus
           />
+          {error && <div className="Input-error-msg"></div>}
         </div>
         <button type="submit" className={isFocus ? "opaque" : ""}>
           Search

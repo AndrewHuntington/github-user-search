@@ -1,29 +1,25 @@
-import useAxios from "axios-hooks";
 import InfoDisplayHeader from "./InfoDisplayHeader";
 import InfoDisplayBody from "./InfoDisplayBody";
 import InfoDisplayBottom from "./InfoDisplayBottom";
 import "./InfoDisplay.css";
 
-// * Constants
-const URL = "https://api.github.com/users/";
-
 // * Type Declarations
 type InfoDisplayProps = {
-  username: string;
+  data: any; // TODO: Type better
+  loading: boolean;
+  error: any; // TODO: Type better
   isDarkMode: boolean;
 };
 
 export default function InfoDisplay({
-  username,
+  data,
+  loading,
+  error,
   isDarkMode,
 }: InfoDisplayProps) {
-  // * Hooks
-  const [{ data, loading, error }] = useAxios(`${URL}${username}`);
-
   // * API States
-  // TODO: Improve these
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error!</p>;
+  if (error) return <p></p>;
 
   return (
     <div className={`InfoDisplay ${isDarkMode && "semi-dark"}`}>

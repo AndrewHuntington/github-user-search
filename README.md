@@ -59,6 +59,11 @@ Users should be able to:
 
 This project is the first one where I added a way to switch to dark mode. (Type more later...)
 
+- Dark mode
+- A little more about how Context works
+- How to handle svgs and change their colors
+- About Axios Hook
+
 ### Continued development (TODO)
 
 - Problems with Context
