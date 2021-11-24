@@ -13,9 +13,10 @@ type Input = {
 
 type InputBarProps = {
   setUsername: (username: string) => void;
+  isDarkMode: boolean;
 };
 
-export default function InputBar({ setUsername }: InputBarProps) {
+export default function InputBar({ setUsername, isDarkMode }: InputBarProps) {
   // * Hooks
   const {
     register,

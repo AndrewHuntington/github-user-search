@@ -1,22 +1,29 @@
-import { useState } from "react";
-import Header from "./components/Header";
+import { useState, useEffect } from "react";
 import InputBar from "./components/InputBar";
 import InfoDisplay from "./components/InfoDisplay";
-import { ThemeProvider } from "./contexts/ThemeContext";
+import Header from "./components/Header";
 import "./App.css";
 
 function App() {
   // * Hooks
   const [username, setUsername] = useState("octocat");
+  const [isDarkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+    console.log({ isDarkMode });
+  }, [isDarkMode]);
 
   return (
-    <ThemeProvider>
-      <div className="App">
-        <Header />
-        <InputBar setUsername={setUsername} />
-        <InfoDisplay username={username} />
-      </div>
-    </ThemeProvider>
+    <div className="App">
+      <Header isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+      <InputBar setUsername={setUsername} isDarkMode={isDarkMode} />
+      <InfoDisplay username={username} isDarkMode={isDarkMode} />
+    </div>
   );
 }
 

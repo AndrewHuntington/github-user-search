@@ -10,9 +10,13 @@ const URL = "https://api.github.com/users/";
 // * Type Declarations
 type InfoDisplayProps = {
   username: string;
+  isDarkMode: boolean;
 };
 
-export default function InfoDisplay({ username }: InfoDisplayProps) {
+export default function InfoDisplay({
+  username,
+  isDarkMode,
+}: InfoDisplayProps) {
   // * Hooks
   const [{ data, loading, error }] = useAxios(`${URL}${username}`);
 
