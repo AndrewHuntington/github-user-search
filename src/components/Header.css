@@ -22,6 +22,16 @@
   opacity: 1;
 }
 
+.reverse-trans-effect {
+  opacity: 1;
+}
+
+.reverse-trans-effect:hover,
+.reverse-trans-effect:focus {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
 .Header span {
   font: var(--h4);
   font-weight: bold;

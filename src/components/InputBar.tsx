@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import searchIcon from "../assets/icon-search.svg";
 import "./InputBar.css";
@@ -57,7 +57,7 @@ export default function InputBar({ setUsername, isDarkMode }: InputBarProps) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="Input-container">
+      <div className={`Input-container ${isDarkMode && "semi-dark"}`}>
         <div
           className="Input-search-container"
           onMouseEnter={changeOpacity}
@@ -66,6 +66,7 @@ export default function InputBar({ setUsername, isDarkMode }: InputBarProps) {
           <img src={searchIcon} alt="magnifying glass" />
           {/* TODO: Add error message when search fails */}
           <input
+            className={`${isDarkMode && "semi-dark"}`}
             type="text"
             {...register("userSearch")}
             placeholder="Search GitHub username…"

@@ -10,12 +10,7 @@ function App() {
   const [isDarkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    if (isDarkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-    console.log({ isDarkMode });
+    document.body.classList.toggle("dark", isDarkMode);
   }, [isDarkMode]);
 
   return (

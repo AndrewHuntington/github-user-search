@@ -10,6 +10,11 @@
   justify-content: space-between;
 }
 
+/* .Input-container-dark {
+  background-color: var(--color-lighter-black-dark);
+  color: var(--color-white);
+} */
+
 .Input-container img {
   height: 20px;
   width: 20px;

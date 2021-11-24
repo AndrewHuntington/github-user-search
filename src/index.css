@@ -47,9 +47,14 @@ body {
   font: var(--body-text);
 }
 
-.dark-mode {
-  background-color: var(--color-black-dark);
-  color: var(--color-white);
+.dark {
+  background-color: var(--color-black-dark) !important;
+  color: var(--color-white) !important;
+}
+
+.semi-dark {
+  background-color: var(--color-lighter-black-dark) !important;
+  color: var(--color-white) !important;
 }
 
 h1 {

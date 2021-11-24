@@ -10,12 +10,15 @@ type HeaderProps = {
 export default function Header({ isDarkMode, setDarkMode }: HeaderProps) {
   return (
     <header className="Header">
-      <h1 className="Header-title">devfinder</h1>
-      <div className="Header-toggle" onClick={() => setDarkMode(!isDarkMode)}>
+      <h1 className={`Header-title ${isDarkMode && "dark"}`}>devfinder</h1>
+      <div
+        className={`Header-toggle ${isDarkMode && "reverse-trans-effect"}`}
+        onClick={() => setDarkMode(!isDarkMode)}
+      >
         {isDarkMode ? (
           <>
             {" "}
-            <span>LIGHT</span> <img src={sun} alt="sun" />{" "}
+            <span className="dark">LIGHT</span> <img src={sun} alt="sun" />{" "}
           </>
         ) : (
           <>
