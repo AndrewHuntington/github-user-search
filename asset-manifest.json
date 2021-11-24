@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/github-user-search/static/css/main.01ff79ce.chunk.css",
+    "main.js": "/github-user-search/static/js/main.d4ca10d3.chunk.js",
+    "main.js.map": "/github-user-search/static/js/main.d4ca10d3.chunk.js.map",
+    "runtime-main.js": "/github-user-search/static/js/runtime-main.f0f3efae.js",
+    "runtime-main.js.map": "/github-user-search/static/js/runtime-main.f0f3efae.js.map",
+    "static/js/2.0e7d269c.chunk.js": "/github-user-search/static/js/2.0e7d269c.chunk.js",
+    "static/js/2.0e7d269c.chunk.js.map": "/github-user-search/static/js/2.0e7d269c.chunk.js.map",
+    "static/js/3.785edde4.chunk.js": "/github-user-search/static/js/3.785edde4.chunk.js",
+    "static/js/3.785edde4.chunk.js.map": "/github-user-search/static/js/3.785edde4.chunk.js.map",
+    "index.html": "/github-user-search/index.html",
+    "static/css/main.01ff79ce.chunk.css.map": "/github-user-search/static/css/main.01ff79ce.chunk.css.map",
+    "static/js/2.0e7d269c.chunk.js.LICENSE.txt": "/github-user-search/static/js/2.0e7d269c.chunk.js.LICENSE.txt",
+    "static/media/icons.css": "/github-user-search/static/media/icon-website.b7923f6c.svg",
+    "static/media/icon-moon.cce754ce.svg": "/github-user-search/static/media/icon-moon.cce754ce.svg",
+    "static/media/icon-search.0cc0c984.svg": "/github-user-search/static/media/icon-search.0cc0c984.svg",
+    "static/media/icon-sun.f28a8996.svg": "/github-user-search/static/media/icon-sun.f28a8996.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0f3efae.js",
+    "static/js/2.0e7d269c.chunk.js",
+    "static/css/main.01ff79ce.chunk.css",
+    "static/js/main.d4ca10d3.chunk.js"
+  ]
+}
