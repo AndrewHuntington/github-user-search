@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { AxiosError } from "axios";
 import useAxios from "axios-hooks";
 import InputBar from "./components/InputBar";
 import InfoDisplay from "./components/InfoDisplay";
@@ -43,13 +44,13 @@ function App() {
       <InputBar
         setUsername={setUsername}
         isDarkMode={isDarkMode}
-        error={error}
+        error={error as AxiosError<any, any> | null}
       />
       <InfoDisplay
         isDarkMode={isDarkMode}
         data={data}
         loading={loading}
-        error={error}
+        error={error as AxiosError<any, any> | null}
       />
     </div>
   );

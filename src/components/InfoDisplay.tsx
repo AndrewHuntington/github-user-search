@@ -1,3 +1,4 @@
+import { AxiosError } from "axios";
 import InfoDisplayHeader from "./InfoDisplayHeader";
 import InfoDisplayBody from "./InfoDisplayBody";
 import InfoDisplayBottom from "./InfoDisplayBottom";
@@ -5,9 +6,9 @@ import "./InfoDisplay.css";
 
 // * Type Declarations
 type InfoDisplayProps = {
-  data: any; // TODO: Type better
+  data: any;
   loading: boolean;
-  error: any; // TODO: Type better
+  error: AxiosError<any, any> | null;
   isDarkMode: boolean;
 };
 

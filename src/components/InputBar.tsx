@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { AxiosError } from "axios";
 import { useForm } from "react-hook-form";
 import searchIcon from "../assets/icon-search.svg";
 import "./InputBar.css";
@@ -11,7 +12,7 @@ type Input = {
 type InputBarProps = {
   setUsername: (username: string) => void;
   isDarkMode: boolean;
-  error: any; // TODO: Type better
+  error: AxiosError<any, any> | null;
 };
 
 export default function InputBar({
