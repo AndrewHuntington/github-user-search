@@ -1,12 +1,13 @@
 .Header {
   display: flex;
   justify-content: space-between;
+
+  color: var(--color-black-light);
   margin-bottom: 2.25rem;
 }
 
 .Header-title {
   font: var(--h1);
-  color: var(--color-black-light);
 }
 
 .Header-toggle {

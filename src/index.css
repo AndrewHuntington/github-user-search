@@ -15,7 +15,7 @@
   --color-dark-grey: #697c9a;
   --color-greyish-blue: #4b6a9b;
   --color-black-light: #2b3442;
-  /* --color-light-grey: #f6f8ff; */
+  --color-light-grey: #f6f8ff;
   --color-off-white: #fefefe;
 
   /* Dark Mode */
@@ -45,16 +45,6 @@ body {
   background-color: var(--color-light-grey);
   color: var(--color-greyish-blue);
   font: var(--body-text);
-}
-
-.dark {
-  background-color: var(--color-black-dark) !important;
-  color: var(--color-white) !important;
-}
-
-.semi-dark {
-  background-color: var(--color-lighter-black-dark) !important;
-  color: var(--color-white) !important;
 }
 
 h1 {

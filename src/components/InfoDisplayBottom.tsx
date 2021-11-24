@@ -1,7 +1,4 @@
-import iconLocation from "../assets/icon-location.svg";
-import iconWebsite from "../assets/icon-website.svg";
-import iconTwitter from "../assets/icon-twitter.svg";
-import iconCompany from "../assets/icon-company.svg";
+import "../assets/icons.css";
 import "./InfoDisplayBottom.css";
 
 type InfoDisplayBottomProps = {
@@ -9,6 +6,7 @@ type InfoDisplayBottomProps = {
   blog?: string;
   twitter_username?: string;
   company?: string;
+  isDarkMode: boolean;
 };
 
 export default function InfoDisplayBottom({
@@ -16,6 +14,7 @@ export default function InfoDisplayBottom({
   blog,
   twitter_username,
   company,
+  isDarkMode,
 }: InfoDisplayBottomProps) {
   return (
     <div className="InfoDisplayBottom">
@@ -30,12 +29,15 @@ export default function InfoDisplayBottom({
         <div
           className={`InfoDisplayBottom-line ${location ? "" : "transparent"}`}
         >
-          <img className="location" src={iconLocation} alt="" />
+          {/* <img className="location" src={iconLocation} alt="" /> */}
+          <div className={`icon loc-icon ${isDarkMode && "icon-dark"}`}></div>
           <p>{location ? location : "Not Available"}</p>
         </div>
 
         <a
-          className={`InfoDisplayBottom-link ${blog ? "" : "inactive"}`}
+          className={`InfoDisplayBottom-link ${isDarkMode && "semi-dark"}  ${
+            blog ? "" : "inactive"
+          }`}
           href={`http://${blog}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -43,7 +45,10 @@ export default function InfoDisplayBottom({
           <div
             className={`InfoDisplayBottom-line ${blog ? "" : "transparent"}`}
           >
-            <img src={iconWebsite} alt="" />
+            {/* <img src={iconWebsite} alt="" /> */}
+            <div
+              className={`icon link-icon ${isDarkMode && "icon-dark"}`}
+            ></div>
             <p>{blog ? blog : "Not Available"}</p>
           </div>
         </a>
@@ -51,7 +56,7 @@ export default function InfoDisplayBottom({
 
       <div className="InfoDisplayBottom-col-2">
         <a
-          className={`InfoDisplayBottom-link ${
+          className={`InfoDisplayBottom-link ${isDarkMode && "semi-dark"} ${
             twitter_username ? "" : "inactive"
           }`}
           href={`https://twitter.com/${twitter_username}`}
@@ -63,13 +68,18 @@ export default function InfoDisplayBottom({
               twitter_username ? "" : "transparent"
             }`}
           >
-            <img src={iconTwitter} alt="" />
+            {/* <img src={iconTwitter} alt="" /> */}
+            <div
+              className={`icon twitter-icon ${isDarkMode && "icon-dark"}`}
+            ></div>
             <p>{twitter_username ? twitter_username : "Not Available"}</p>
           </div>
         </a>
 
         <a
-          className={`InfoDisplayBottom-link ${company ? "" : "inactive"}`}
+          className={`InfoDisplayBottom-link ${isDarkMode && "semi-dark"} ${
+            company ? "" : "inactive"
+          }`}
           href={`https://github.com/${company?.slice(1, company.length)}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -77,7 +87,10 @@ export default function InfoDisplayBottom({
           <div
             className={`InfoDisplayBottom-line ${company ? "" : "transparent"}`}
           >
-            <img src={iconCompany} alt="" />
+            {/* <img src={iconCompany} alt="" /> */}
+            <div
+              className={`icon company-icon ${isDarkMode && "icon-dark"}`}
+            ></div>
             <p>{company ? company : "Not Available"}</p>
           </div>
         </a>

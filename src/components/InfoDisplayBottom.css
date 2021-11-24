@@ -7,8 +7,8 @@
 }
 
 .InfoDisplayBottom-link {
-  text-decoration: none;
   color: var(--color-greyish-blue);
+  text-decoration: none;
 }
 
 .InfoDisplayBottom-link:hover,
@@ -30,7 +30,12 @@
   margin-right: var(--space);
 }
 
-.location {
+.filter-white {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(70deg)
+    brightness(99%) contrast(107%);
+}
+
+.InfoDisplayBottom-line .location {
   margin-right: 1.203125rem;
 }
 

@@ -7,6 +7,7 @@ import "./App.css";
 function App() {
   // * Hooks
   const [username, setUsername] = useState("octocat");
+  // dark mode styles found in InfoDisplay.css
   const [isDarkMode, setDarkMode] = useState(false);
 
   useEffect(() => {

@@ -5,6 +5,7 @@ type InfoDisplayBodyProps = {
   public_repos: number;
   followers: number;
   following: number;
+  isDarkMode: boolean;
 };
 
 /**
@@ -17,6 +18,7 @@ export default function InfoDisplayBody({
   public_repos,
   followers,
   following,
+  isDarkMode,
 }: InfoDisplayBodyProps) {
   return (
     <div className="InfoDisplayBody">
@@ -28,7 +30,7 @@ export default function InfoDisplayBody({
         )}
       </div>
 
-      <div className="InfoDisplayBody-stat-block">
+      <div className={`InfoDisplayBody-stat-block && ${isDarkMode && "dark"}`}>
         <div className="InfoDisplayBody-columns">
           <div className="col-1">
             <div className="stat-block-title">

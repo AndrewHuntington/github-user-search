@@ -6,6 +6,7 @@ type InfoDisplayHeaderProps = {
   avatar_url: string;
   name?: string;
   created_at: string;
+  isDarkMode: boolean;
 };
 
 export default function InfoDisplayHeader({
@@ -13,6 +14,7 @@ export default function InfoDisplayHeader({
   avatar_url,
   name,
   created_at,
+  isDarkMode,
 }: InfoDisplayHeaderProps) {
   const parseDate = (dateStr: string) => {
     if (!dateStr) return "Not Available";
@@ -49,7 +51,7 @@ export default function InfoDisplayHeader({
           <h3 className="InfoDisplayHeader-login">@{login}</h3>
         </div>
         <div className="InfoDisplayHeader-col-2-sub-col-2">
-          <p className="InfoDisplayHeader-date">
+          <p className={`InfoDisplayHeader-date ${isDarkMode && "semi-dark"}`}>
             Joined {parseDate(created_at!)}
           </p>
         </div>
