@@ -33,7 +33,7 @@ Users should be able to:
 
 ![devfinder](./src/assets/Screenshot.png)
 
-### Links (TODO)
+### Links
 
 - Solution URL: [https://www.frontendmentor.io/solutions/responsive-github-user-search-using-react-and-typescript-wthemes-I0wb3JMg4](https://www.frontendmentor.io/solutions/responsive-github-user-search-using-react-and-typescript-wthemes-I0wb3JMg4)
 - Live Site URL: [https://AndrewHuntington.github.io/github-user-search](https://AndrewHuntington.github.io/github-user-search)
